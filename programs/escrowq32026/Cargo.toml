@@ -1,7 +1,7 @@
 [package]
 name = "escrowq32026"
 version = "0.1.0"
-description = "Created with Anchor"
+description = "Token-for-token escrow exercise for Turbin3 Week 2"
 edition.workspace = true
 rust-version.workspace = true
 
@@ -19,7 +19,6 @@ anchor-debug = []
 custom-heap = []
 custom-panic = []
 
-
 [dependencies]
 anchor-lang = { version = "1.1.2", features = ["init-if-needed"] }
 anchor-spl = "1.1.2"
@@ -34,6 +33,4 @@ solana-keypair = "3.0.1"
 solana-pubkey = "4.1.0"
 
 [lints.rust]
-unexpected_cfgs = { level = "warn", check-cfg = [
-    'cfg(target_os, values("solana"))',
-] }
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(target_os, values("solana"))'] }

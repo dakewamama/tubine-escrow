@@ -1,7 +1,7 @@
-pub use anchor_lang::prelude::*;
+use anchor_lang::prelude::*;
 
-#[derive(InitSpace)]
 #[account(discriminator = 1)]
+#[derive(InitSpace)]
 pub struct Escrow {
     pub seed: u64,
     pub maker: Pubkey,
